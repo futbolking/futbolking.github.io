@@ -181,13 +181,6 @@ layout: base
 
                 {%- endif -%}
 
-                    <div class="js-article-content">{{ content }}</div>
-                    {%- if _comment != false -%}
-                      <section class="page__comments d-print-none">{%- include comments.html -%}</section>
-                    {%- endif -%}
-                </article>
-
-              </div>
             </div>
 
         {%- if _full_width == false -%}
@@ -210,7 +203,7 @@ layout: base
   <div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div>
 {%- endif -%}
 {%- if _header != false -%}
-  <div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal">{%- include search.html -%}</div>
+  <div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"></div>
 {%- endif -%}
 </div>
 
@@ -237,6 +230,3 @@ layout: base
   {%- include scripts/aside/affix.js -%}
 </script>
 {%- endif -%}
-
-{%- include markdown-enhancements.html -%}
-{%- include pageview.html -%}
